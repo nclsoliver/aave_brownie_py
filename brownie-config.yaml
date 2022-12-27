@@ -7,9 +7,9 @@ compiler:
 dotenv: .env
 networks:
   default: mainnet-fork
-  kovan: active
   goerli: 
     weth_token: '0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6'
-  mainnet-fork: '0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6'
+  mainnet-fork: 
+    weth_token: '0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6'
 wallets:
   from_key: ${PRIVATE_KEY}
