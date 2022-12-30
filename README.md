@@ -1,5 +1,5 @@
 1. Swap our ETH for WETH
-2. Deposit some ETH into Aave
+2. Deposit some ETH (weth) into Aave
 3. Barrow some assrt with the ETH collateral
     1. Sell that borrowed asset. (short selling)
 4. Repay everything back
