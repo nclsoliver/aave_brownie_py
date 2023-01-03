@@ -14,6 +14,11 @@ verify: False
 # set a custom mnemonic for the development network
 networks:
     default: mainnet-fork
+    settings:
+        gas_limit: "auto"
+        gas_price: "auto"
+        persist: true
+        reverting_tx_gas_limit: False
     mainnet-fork:
         lending_pool_addresses_provider: "0xB53C1a33016B2DC2fF3653530bfF1848a515c8c5"
         weth_token: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
@@ -45,21 +50,19 @@ networks:
         lending_pool_addresses_provider: "0x88757f2f99175387ab4c6a4b3067c77a695b0349"
         weth_token: "0xd0a1e359811322d97991e03f863a0c30c2cf029c"
     goerli:
-        gas_limit: 550000
-        reverting_tx_gas_limit: false
         vrf_coordinator: "0x2Ca8E0C643bDe4C2E08ab1fA0da3401AdAD7734D" 
         aave_link_token: "0xAD5ce863aE3E4E9394Ab43d4ba0D80f419F61789"
         aave_dai_token: "0xFf795577d9AC8bD7D90Ee22b6C1703490b6512FD"
         link_token: "0x326C977E6efc84E512bB9C30f76E30c160eD06FB"
         keyhash: "0x79d3d8832d904592c0bf9818b621522c988bb8b0c05cdc3b15aea1b6e8db0c15"
-        #fee: 250000000000000000
+        fee: 100000000000000000
         oracle: "0xCC79157eb46F5624204f47AB42b3906cAA40eaB7"
         jobId: ca98366cc7314957b8c012c72f05aeeb
         eth_usd_price_feed: "0xD4a33860578De61DBAbDc8BFdb98FD742fA7028e"
         link_eth_price_feed: "0xb4c4a493AB6356497713A78FFA6c60FB53517c63"
         dai_eth_price_feed: "0x773616E4d11A78F511299002da57A0a94577F1f4"
-        #gas_lane: "0x79d3d8832d904592c0bf9818b621522c988bb8b0c05cdc3b15aea1b6e8db0c15"
-        lending_pool_addresses_provider: '0x5E52dEc931FFb32f609681B8438A51c675cc232d'
+        gas_lane: "0x79d3d8832d904592c0bf9818b621522c988bb8b0c05cdc3b15aea1b6e8db0c15"
+        lending_pool_addresses_provider: '0x5E52dEc931FFb32f609681B8438A51c675cc232d' 
         weth_token: '0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6'        
 wallets:
     from_key: ${PRIVATE_KEY}
