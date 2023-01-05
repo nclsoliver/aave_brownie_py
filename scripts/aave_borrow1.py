@@ -13,7 +13,7 @@ def main():
     lending_pool = get_lending_pool()
     approve_erc20(amount, lending_pool.address, erc20_address, account)
     print("Depositing...")
-    lending_pool.deposit(erc20_address, amount, account.address, 0,{"from": account, 'allow_revert':True, 'gas_limit':25500})
+    lending_pool.deposit(erc20_address, amount, account.address, 0,{"from": account, 'allow_revert':True, 'gas_limit':25500, 'reverting_tx_gas_limit': True})
     print("Deposited!")
     borrowable_eth, total_debt_eth = get_borrowable_data(lending_pool, account)
     print(f"LETS BORROW IT ALL")

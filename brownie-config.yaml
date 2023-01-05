@@ -13,12 +13,13 @@ dotenv: .env
 verify: False
 # set a custom mnemonic for the development network
 networks:
-    default: mainnet-fork
     settings:
-        gas_limit: "auto"
+        gas_limit: "25500"
         gas_price: "auto"
         persist: true
         reverting_tx_gas_limit: False
+    default: mainnet-fork
+    
     mainnet-fork:
         lending_pool_addresses_provider: "0xB53C1a33016B2DC2fF3653530bfF1848a515c8c5"
         weth_token: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
